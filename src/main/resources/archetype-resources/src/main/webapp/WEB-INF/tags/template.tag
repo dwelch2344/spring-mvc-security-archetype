@@ -13,8 +13,10 @@
 
 		<c:url value="/" var="baseUrl" />
 		<c:set value="${symbol_dollar}{fn:length(baseUrl)}" var="baseUrlLen" />
-		<c:set var="baseUrl" value="${symbol_dollar}{fn:substring(baseUrl, 0, baseUrlLen)}"/>
+		<c:set var="baseUrl" value="${symbol_dollar}{fn:substring(baseUrl, 0, baseUrlLen - 1)}"/>
 		
+    	<link rel="stylesheet" type="text/css" media="all" href="${symbol_dollar}{baseUrl}/resources/bootstrap/css/bootstrap.css"/>
+    	<link rel="stylesheet" type="text/css" media="all" href="${symbol_dollar}{baseUrl}/resources/bootstrap/css/bootstrap-responsive.css"/>
 		<link rel="stylesheet" type="text/css" media="all" href="${symbol_dollar}{baseUrl}/resources/style.css"/>
 		<script type="text/javascript" src="${symbol_dollar}{baseUrl}/resources/project.js" ></script>
 		<jsp:invoke fragment="head"/>
